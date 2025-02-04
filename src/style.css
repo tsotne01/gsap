@@ -1,0 +1,276 @@
+@font-face {
+  font-family: "Integral CF";
+  src:
+    url("../src/fonts/Integral-CF-Font-Family/Fontspring-DEMO-integralcf-medium.otf") format("opentype")
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src:
+    url("./fonts/satoshi-webfont/Satoshi-Medium.woff") format("woff")
+}
+
+:root{
+  --max-width: 1240px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.banner{
+  height: 38px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 425px;
+  color: #fff;
+  font-family: "Satoshi";
+  font-weight: normal;
+  font-size: 14px;
+  width: var(--max-width);
+}
+
+.banner-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+}
+
+.banner-link{
+  color: #ffff;
+  font-weight: bolder;
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  
+}
+
+.close{
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button{
+  border: none;
+  background-color: inherit;
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop-icon{
+  cursor: pointer;
+}
+
+.navigation{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: var(--max-width);
+  margin: 24px;
+  font-family: "Satoshi",sans-serif;
+}
+
+.nav-list{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 320px;
+  list-style: none;
+}
+
+.nav-link{
+  color: #000000;
+  text-decoration: none;
+}
+
+.search-input{
+  border: none;
+  outline: none;
+  padding: 5px 30px;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 577px;
+  height: 48px;
+  border-radius: 62px;
+  font-family: "Satoshi",sans-serif;
+
+}
+
+.header-btns{
+  width: 62px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button{
+  cursor: pointer;
+}
+
+.flex{
+  display: flex;
+}
+
+.number{
+  font-family: "Satoshi",sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  color: #000000;
+}
+
+.subtitle{
+  font-family: "Satoshi",sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: hsla(0, 0%, 0%, 0.6);
+}
+
+.section-1-title{
+  font-family: "Integral CF",sans-serif;
+  font-weight: bold;
+  font-size: 64px;
+  max-width: 577px;
+  line-height: 64px;
+}
+
+.section-1-subtitle{
+  font-family: "Satoshi",sans-serif;
+  line-height: 22px;
+  max-width: 545px;
+  color: hsla(0, 0%, 0%, 0.6);
+}
+
+.button-shop{
+  width: 210px;
+  height: 52px;
+  background-color: #000000;
+  border-radius: 62px;
+  color: #FFFFFF;
+  font-family: "Satoshi",sans-serif;
+  font-size: 16px;
+}
+
+.section-1{
+  background-image: url(./assets/section-1-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1440px 100%;
+  height: 663px;
+  background-color: #F2F0F1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.section-1-wrapper{
+  width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+}
+
+.border-right{
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0 32px;
+}
+
+.p-0-32{
+  padding: 0 32px;
+}
+.mbottom-32{
+  margin-bottom: 32px;
+}
+.mbottom-48{
+  margin-bottom: 48px;
+}
+.mbottom-8{
+  margin-bottom: 8px;
+}
+
+.mbottom-16{
+  margin-bottom: 16px;
+}
+
+.loggos-wrapper{
+  background-color: #000000;
+  height: 122px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.logos{
+  width: var(--max-width);
+  display: flex;
+  justify-content: space-around;
+}
+
+.fontIntegral{
+  font-family: "Integral CF",sans-serif;
+}
+
+.fontSatoshi{
+  font-family: "Satoshi",sans-serif;
+}
+
+.hidden{
+  display: none;
+}
+
+.section-2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  /* justify-content: center; */
+}
+
+.section-2-title{
+  font-size: 48px;
+  font-weight: bold;
+  margin-top: 72px;
+  margin-bottom: 48px;
+}
+
+
+.price{
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.card-wrapper{
+  display: flex;
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.button-view-all{
+  width: 218px;
+  height: 52px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 62px;
+  font-size: 16px;
+  margin-bottom: 64px;
+}
+
+.colorGrey{
+  color: grey;
+}
+.colorLime{
+  color: lime;
+}
+
+.min-height{
+  height: 50px;
+}
