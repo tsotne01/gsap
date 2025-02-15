@@ -7,7 +7,7 @@
 @font-face {
     font-family: "Satoshi";
     src:
-        url("./fonts/satoshi-webfont/Satoshi-Medium.woff") format("woff")
+        url("../../fonts/satoshi-webfont/Satoshi-Medium.woff") format("woff")
 }
 
 :root {
@@ -23,6 +23,7 @@
 
 html {
     font-size: 16px;
+    font-family: Satoshi;
 }
 
 a {
@@ -198,6 +199,8 @@ header ul li a:hover {
 /* ----------- */
 
 
+/* clothe review */
+
 .clothe-review-container {
     margin-top: 36px;
 
@@ -210,7 +213,9 @@ header ul li a:hover {
 
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
+
 
 .clothe-card {
     display: grid;
@@ -219,6 +224,11 @@ header ul li a:hover {
     gap: 14px;
     width: 600px;
     font-family: Satoshi;
+}
+
+.card {
+    justify-content: space-between;
+    display: flex;
 }
 
 .clothe-img {
@@ -311,7 +321,7 @@ header ul li a:hover {
     font-weight: 400;
 }
 
-.clothe-color-container .clothe-color{
+.clothe-color-container .clothe-color {
     display: flex;
     gap: 16px;
     padding-bottom: 24px;
@@ -344,7 +354,7 @@ header ul li a:hover {
     margin: 24px 0;
 }
 
-.clothe-size > div {
+.clothe-size>div {
     display: flex;
     gap: 12px;
     padding-bottom: 24px;
@@ -379,19 +389,15 @@ header ul li a:hover {
     border-radius: 62px;
 }
 
-.clothe-addCart-btn div:nth-child(1) button {
-    font-size: 30px;
-}
-
-.clothe-addCart-btn div:nth-child(2){
+.clothe-addCart-btn div:nth-child(2) {
     background-color: #000000;
-    width: 100%;
+    width: clamp(231px, 100%, 400px);
     padding: 15px 0;
     color: #FFFFFF;
     border-radius: 62px;
     display: flex;
     justify-content: center;
-    font-family: Satoshi;  
+    font-family: Satoshi;
     cursor: pointer;
     transition: .3s ease;
 }
@@ -399,4 +405,186 @@ header ul li a:hover {
 .clothe-addCart-btn div:nth-child(2):active {
     color: #000000;
     background-color: #F0F0F0;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 118px;
+}
+
+.product-info ul {
+    display: flex;
+    align-items: center;
+}
+
+.product-info ul li {
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 24px;
+    width: 414px;
+    text-align: center;
+    transition: 1s ease;
+    color: #00000099;
+    cursor: pointer;
+}
+
+.product-info ul li:hover {
+    border-bottom: 1px solid #000000;
+    color: #000000;
+}
+
+
+/* ---------- */
+
+
+/* review container */
+
+.review {
+    display: flex;
+    justify-content: center;
+    font-family: Satoshi;
+    margin-top: 24px;
+}
+
+.review-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: var(--container-wrapper);
+}
+
+.review-navigation-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.review-navigation-content h6 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.review-navigation-content span {
+    color: #00000099;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.review-navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.review-navigation-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.review-navigation-btns button {
+    border-radius: 62px;
+    background-color: #F0F0F0;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.review-navigation-btns button:nth-child(1) {
+    padding: 12px;
+}
+
+.review-navigation-btns button:nth-child(2) {
+    padding: 13px 20px;
+    display: flex;
+    gap: 21px;
+}
+
+.review-navigation-btns button:nth-child(2) img {
+    padding-top: 3px;
+    width: 16px;
+    height: 16px;
+}
+
+.review-navigation-btns button:nth-child(3) {
+    padding: 13px 30px;
+    background-color: #000000;
+    color: #fff;
+}
+
+.review-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.review-content-card {
+    display: flex;
+    flex-direction: column;
+    width: clamp(358px, 100%, 738px);
+    padding: 28px 32px;
+}
+
+.review-content-card-star {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review-content-card-star div:nth-child(2) {
+    display: flex;
+    gap: 2px;
+    cursor: pointer;
+}
+
+.review-content-card-star div:nth-child(2) span {
+    width: 5px;
+    height: 5px;
+    background-color: #00000066;
+    border-radius: 50%;
+}
+
+.review-content-card-header {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 15px 0 12px 0;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.review-content-card p {
+    font-size: 1rem;
+    color: #00000099;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+.review-content-card h6 {
+    color: #00000099;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.load-more {
+    padding: 15px 45px;
+    border: 1px solid #0000001A;
+    margin-top: 36px;
+    width: 230px;
+    border-radius: 62px;
+    align-self: center;
+}
+
+/* ---------------- */
+
+
+
+
+
+
+/* ---- for phone ------ */
+@media only screen and (max-width: 768px) {
+    .review-content {
+        grid-template-columns: 1fr;
+    }
 }
