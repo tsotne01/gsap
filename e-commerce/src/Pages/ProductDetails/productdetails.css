@@ -579,12 +579,100 @@ header ul li a:hover {
 
 
 
+/* T-shirt container */
+
+.tshirt-container {
+    display: flex;
+    justify-content: center;
+    font-family: Satoshi;
+    margin-top: 64px;
+}
+
+.tshirt-container-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var(--container-wrapper);
+}
+
+.tshirt-container-wrapper h2 {
+    font-size: 48px;
+    font-family: bold-Integral cf;
+}
+
+.tshirt-card-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.review-content-card-star {
+    justify-content: flex-start;
+    gap: 13px;
+}
+
+.tshirt-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 55px 5px 78px 5px;
+}
+
+.tshirt-card img {
+    border-radius: 20px;
+}
+
+.image-clothe {
+    width: clamp(199px, 100%, 295px);
+}
+
+.tshirt-card h4 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.tshirt-card-price {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.tshirt-card-price span:nth-child(2) {
+    color: #00000066;
+}
+
+.tshirt-card-price span:nth-child(3) {
+    background-color: #FF33331A;
+    padding: 6px 13.5px;
+    color: #FF3333;
+    border-radius: 62px;
+    font-size: 12px;
+}
+
+.review-content-card-star {
+    margin: 8px 0;
+}
+
+/* ------ */
+
+
+/* latest offer container */
+
+
+
+/* --------- */
 
 
 
 /* ---- for phone ------ */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 868px) {
     .review-content {
         grid-template-columns: 1fr;
+    }
+
+    .tshirt-card-wrapper {
+        flex-wrap: wrap;
     }
 }
