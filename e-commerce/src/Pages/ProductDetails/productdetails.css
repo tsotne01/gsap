@@ -1,0 +1,192 @@
+@font-face {
+    font-family: "bold-Integral CF";
+    src:
+        url("../../fonts/Integral-CF-Font-Family/Fontspring-DEMO-integralcf-extrabold.otf") format("opentype")
+}
+
+@font-face {
+    font-family: "Satoshi";
+    src:
+        url("./fonts/satoshi-webfont/Satoshi-Medium.woff") format("woff")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+a,
+button,
+input {
+    cursor: pointer;
+}
+
+/* banner section */
+
+.banner {
+    padding: 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: "Satoshi";
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.banner-wrapper {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-link {
+    color: #ffff;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-decoration-color: #fff;
+}
+
+
+/* ---------- */
+
+
+/* header */
+
+header {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 62px;
+
+    width: clamp(1090px, 100%, 1600px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 0;
+    gap: 40px;
+}
+
+.company-name {
+    font-weight: 1000;
+    font-size: 32px;
+    color: #000000;
+    font-family: bold-Integral CF;
+    margin-left: 5px;
+}
+
+header ul {
+    display: flex;
+    gap: 24px;
+}
+
+header ul li a {
+    display: flex;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Satoshi;
+    transition: .2s ease;
+}
+
+header ul li a:nth-child(1) {
+    gap: 6.25px;
+}
+
+header ul li a:hover {
+    color: rgba(128, 128, 128, 0.434);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: clamp(100px, 100%, 550px);
+
+    background-color: #F0F0F0;
+    border-radius: 62px;
+
+    padding: 12px 0 12px 16px;
+}
+
+.search-box input {
+    width: 100%;
+}
+
+.search-box input::placeholder {
+    font-size: 16px;
+    font-family: Satioshi;
+    font-weight: 400;
+}
+
+.search-btn {
+    padding-top: 1.86px;
+}
+
+.cart-container {
+    display: flex;
+    gap: 14px;
+    margin-right: 5px;
+}
+
+/* ---------- */
+
+
+/* tabContiner */
+
+
+.tab-container {
+    margin: 125.5px 0 0 100px;
+    display: flex;
+    font-size: 1rem;
+    color: #00000099;
+    font-family: Satoshi;
+}
+
+.tab-container-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 5.5px 0;
+}
+
+.tab-name img {
+    padding: 0.25px 4.25px 0.25px 9.25px;
+}
+
+.tab-name {
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.tab-container .tab-name:hover {
+    color: #000000;
+}
+
+.tab-container .tab-name:active {
+    color: #00000099;
+}
+
+/* ----------- */
