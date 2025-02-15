@@ -91,7 +91,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 13px 5px;
+    padding: 13px 16px;
     gap: 40px;
 }
 
@@ -177,6 +177,8 @@ header ul li a:hover {
     gap: 12px;
     padding: 5px;
     width: clamp(1500px, 100%, 1240px);
+
+    margin: 0 16px;
 }
 
 .tab-name img {
@@ -220,41 +222,38 @@ header ul li a:hover {
 .clothe-card {
     display: grid;
     grid-template-rows: repeat(3, 167px);
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: minmax(111px, 152px) minmax(358px, 444px);
     gap: 14px;
-    width: 600px;
-    font-family: Satoshi;
 }
 
 .card {
     justify-content: space-between;
     display: flex;
+    margin: 0 16px;
 }
 
 .clothe-img {
     border-radius: 20px;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .clothe-img:nth-child(1) {
+    object-fit: cover;
     background: url("../../assets/cart-green-tshirt.png"), center, no-repeat;
-    width: 152px;
 }
 
 .clothe-img:nth-child(2) {
-    width: 430px;
     grid-row: span 3;
     background: url("../../assets/t-shirt.png"), center, no-repeat;
 }
 
 .clothe-img:nth-child(3) {
     background: url("../../assets/t-shirtWithBrownTitle.png"), center, no-repeat;
-    width: 152px;
 }
 
 .clothe-img:nth-child(4) {
     background: url("../../assets/person.png"), center, no-repeat;
-    width: 152px;
 }
 
 .clothe-review {
@@ -262,8 +261,9 @@ header ul li a:hover {
     flex-direction: column;
     justify-content: flex-start;
     width: clamp(320px, 100%, 600px);
-
-    margin: 0 5px 0 40px;
+    
+    font-family: Satoshi;
+    margin: 0 16px 0 40px;
 }
 
 .clothe-review-title {
@@ -409,7 +409,7 @@ header ul li a:hover {
 
 .product-info {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 118px;
 }
 
@@ -422,11 +422,11 @@ header ul li a:hover {
     font-size: 20px;
     font-weight: 500;
     padding-bottom: 24px;
-    width: 414px;
     text-align: center;
     transition: 1s ease;
     color: #00000099;
     cursor: pointer;
+    width: 300px;
 }
 
 .product-info ul li:hover {
@@ -474,6 +474,7 @@ header ul li a:hover {
 .review-navigation {
     display: flex;
     justify-content: space-between;
+    margin: 0 16px;
 }
 
 .review-navigation-btns {
@@ -606,9 +607,10 @@ header ul li a:hover {
     justify-content: space-around;
 }
 
-.review-content-card-star {
+.tshirt-card-wrapper .review-content-card-star {
     justify-content: flex-start;
     gap: 13px;
+    margin: 8px 0;
 }
 
 .tshirt-card {
@@ -651,16 +653,61 @@ header ul li a:hover {
     font-size: 12px;
 }
 
-.review-content-card-star {
-    margin: 8px 0;
-}
 
 /* ------ */
 
 
 /* latest offer container */
 
+.offer {
+    display: flex;
+    justify-content: center;
+}
 
+.offer-wrapper {
+    display: flex;
+    width: var(--container-wrapper);
+    padding: 36px 64px;
+    margin: 0 16px;
+    background-color: #000000;
+    border-radius: 20px;
+    justify-content: space-between;
+    color: #fff;
+    font-family: bold-Integral cf;
+}
+
+.offer-wrapper h1 {
+    font-size: 30px;
+    width: clamp(290px, 100%, 511px);
+}
+
+.offer-btns {
+    width: clamp(311px, 100%, 349px);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.offer-btns div:nth-child(1) {
+    display: flex;
+    gap: 12px;
+    background-color: #FFF;
+    padding: 12px 0 12px 16px;
+    border-radius: 62px;
+}
+
+.offer-btns div:nth-child(1) input::placeholder {
+    color: #00000066;
+}
+
+.offer-btns button {
+    background-color: #FFF;
+    padding: 12px 0;
+    text-align: center;
+    border-radius: 62px;
+    color: #000000;
+    font-size: 1rem;
+}
 
 /* --------- */
 
@@ -668,11 +715,73 @@ header ul li a:hover {
 
 /* ---- for phone ------ */
 @media only screen and (max-width: 868px) {
+    .nav-list {
+        display: none;
+    }
+
+    .card {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .product-info ul li {
+        width: 123px;
+    }
+
     .review-content {
         grid-template-columns: 1fr;
     }
 
     .tshirt-card-wrapper {
         flex-wrap: wrap;
+    }
+
+    .offer-wrapper {
+        flex-wrap: wrap;
+        gap: 32px;
+        justify-content: center;
+        margin: 0 16px;
+    }
+
+    .clothe-review {
+        margin: 20px 0;
+    }
+
+    .review-navigation-btns button{
+        font-size: 12px;
+    }
+
+    .review-navigation-content h6 {
+        font-size: 20px;
+    }
+
+    .product-info ul li {
+        font-size: 1rem;
+    }
+
+    .tshirt-container-wrapper h2 {
+        text-align: center;
+    }
+
+    .review-navigation-btns button:nth-child(2) {
+        display: none;
+    }
+
+    .clothe-size-title {
+        font-size: 14px;
+    }
+
+    .clothe-addCart-btn div:nth-child(1) button img {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .clothe-size > div {
+        justify-content: space-evenly;
+    }
+    .clothe-size-title {
+        font-size: 10px;
     }
 }
