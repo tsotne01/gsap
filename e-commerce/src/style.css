@@ -274,3 +274,17 @@
 .min-height{
   height: 50px;
 }
+
+.star{
+  position: absolute;
+}
+.star-2{
+  right: 15vw;
+  top: 30vh;
+}
+
+.star-1{
+  top: 40vh;
+  right: 50vw;
+  scale: 1.2;
+}

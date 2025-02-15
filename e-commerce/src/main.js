@@ -38,3 +38,16 @@ gsap.to(".title-animation", {
     duration:1,
     
   });
+
+  gsap.to(".star-1",{
+    rotation: 360,
+    scale: 1.2,
+    duration: ()=>(Math.random()*2 + 2),
+    repeat: -1,
+  })
+  gsap.to(".star-2",{
+    rotation: 360,
+    scale: 1.2,
+    duration: ()=>(Math.random()*2 + 2),
+    repeat: -1,
+  })
