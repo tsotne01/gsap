@@ -10,6 +10,11 @@
         url("./fonts/satoshi-webfont/Satoshi-Medium.woff") format("woff")
 }
 
+:root {
+    --container-wrapper: clamp(320px, 100%, 1500px);
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -81,11 +86,11 @@ header {
     left: 50%;
     top: 62px;
 
-    width: clamp(1090px, 100%, 1600px);
+    width: var(--container-wrapper);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 13px 0;
+    padding: 13px 5px;
     gap: 40px;
 }
 
@@ -94,7 +99,6 @@ header {
     font-size: 32px;
     color: #000000;
     font-family: bold-Integral CF;
-    margin-left: 5px;
 }
 
 header ul {
@@ -123,7 +127,7 @@ header ul li a:hover {
     display: flex;
     align-items: center;
     gap: 12px;
-    width: clamp(100px, 100%, 550px);
+    width: clamp(50px, 100%, 550px);
 
     background-color: #F0F0F0;
     border-radius: 62px;
@@ -148,7 +152,6 @@ header ul li a:hover {
 .cart-container {
     display: flex;
     gap: 14px;
-    margin-right: 5px;
 }
 
 /* ---------- */
@@ -158,18 +161,21 @@ header ul li a:hover {
 
 
 .tab-container {
-    margin: 125.5px 0 0 100px;
+    margin-top: 125.5px;
     display: flex;
+    justify-content: center;
     font-size: 1rem;
     color: #00000099;
     font-family: Satoshi;
+    justify-content: center;
 }
 
 .tab-container-wrapper {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 5.5px 0;
+    padding: 5px;
+    width: clamp(1500px, 100%, 1240px);
 }
 
 .tab-name img {
@@ -190,3 +196,207 @@ header ul li a:hover {
 }
 
 /* ----------- */
+
+
+.clothe-review-container {
+    margin-top: 36px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.clothe-review-container-wrapper {
+    width: var(--container-wrapper);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.clothe-card {
+    display: grid;
+    grid-template-rows: repeat(3, 167px);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    width: 600px;
+    font-family: Satoshi;
+}
+
+.clothe-img {
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.clothe-img:nth-child(1) {
+    background: url("../../assets/cart-green-tshirt.png"), center, no-repeat;
+    width: 152px;
+}
+
+.clothe-img:nth-child(2) {
+    width: 430px;
+    grid-row: span 3;
+    background: url("../../assets/t-shirt.png"), center, no-repeat;
+}
+
+.clothe-img:nth-child(3) {
+    background: url("../../assets/t-shirtWithBrownTitle.png"), center, no-repeat;
+    width: 152px;
+}
+
+.clothe-img:nth-child(4) {
+    background: url("../../assets/person.png"), center, no-repeat;
+    width: 152px;
+}
+
+.clothe-review {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: clamp(320px, 100%, 600px);
+
+    margin: 0 5px 0 40px;
+}
+
+.clothe-review-title {
+    text-align: center;
+    font-size: 39px;
+    font-family: bold-Integral CF;
+}
+
+.clothe-review-star {
+    display: flex;
+    gap: 7px;
+    margin: 14px 0;
+}
+
+.clothe-review-star p {
+    font-size: 1rem;
+    font-family: Satoshi;
+}
+
+.clothe-price {
+    display: flex;
+    gap: 12px;
+    font-size: 2rem;
+    align-items: center;
+}
+
+.clothe-price span:nth-child(2) {
+    color: #0000004D;
+}
+
+.clothe-price .sale {
+    background-color: #FF33331A;
+    padding: 6px 14px;
+    color: #FF3333;
+    font-size: 1rem;
+    border-radius: 62px;
+}
+
+.clothe-description {
+    color: #0000004D;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #0000001A;
+
+    margin: 25px 0;
+}
+
+.clothe-color-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.clothe-color-container h5 {
+    color: #00000099;
+    font-weight: 400;
+}
+
+.clothe-color-container .clothe-color{
+    display: flex;
+    gap: 16px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #0000001A;
+}
+
+.clothe-color span {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background-color: #314F4A;
+    cursor: pointer;
+}
+
+.clothe-color span :nth-child(1) {
+    background-color: #4F4631;
+}
+
+.clothe-color span:nth-child(3) {
+    background-color: #31344F;
+}
+
+.clothe-size {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    font-size: 1rem;
+    color: #00000099;
+    margin: 24px 0;
+}
+
+.clothe-size > div {
+    display: flex;
+    gap: 12px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #0000001A;
+}
+
+.clothe-size-title {
+    padding: 12px 24px;
+    border-radius: 62px;
+    background-color: #F0F0F0;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.clothe-size-title:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.clothe-addCart-btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.clothe-addCart-btn div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    padding: 14px 20px;
+    background-color: #F0F0F0;
+    border-radius: 62px;
+}
+
+.clothe-addCart-btn div:nth-child(1) button {
+    font-size: 30px;
+}
+
+.clothe-addCart-btn div:nth-child(2){
+    background-color: #000000;
+    width: 100%;
+    padding: 15px 0;
+    color: #FFFFFF;
+    border-radius: 62px;
+    display: flex;
+    justify-content: center;
+    font-family: Satoshi;  
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.clothe-addCart-btn div:nth-child(2):active {
+    color: #000000;
+    background-color: #F0F0F0;
+}
