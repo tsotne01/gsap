@@ -128,7 +128,7 @@ header ul li a:hover {
     display: flex;
     align-items: center;
     gap: 12px;
-    width: clamp(50px, 100%, 550px);
+    width: clamp(232px, 100%, 550px);
 
     background-color: #F0F0F0;
     border-radius: 62px;
@@ -221,8 +221,8 @@ header ul li a:hover {
 
 .clothe-card {
     display: grid;
-    grid-template-rows: repeat(3, 167px);
-    grid-template-columns: minmax(111px, 152px) minmax(358px, 444px);
+    grid-template-rows: repeat(3, 170px);
+    grid-template-columns: minmax(100px, 152px) minmax(308px, 444px);
     gap: 14px;
 }
 
@@ -238,30 +238,36 @@ header ul li a:hover {
     overflow: hidden;
 }
 
-.clothe-img:nth-child(1) {
-    object-fit: cover;
-    background: url("../../assets/cart-green-tshirt.png"), center, no-repeat;
+.clothe-img:nth-child(1) img {
+    object-fit: contain;
+    width: 100%;
 }
 
 .clothe-img:nth-child(2) {
     grid-row: span 3;
-    background: url("../../assets/t-shirt.png"), center, no-repeat;
 }
 
-.clothe-img:nth-child(3) {
-    background: url("../../assets/t-shirtWithBrownTitle.png"), center, no-repeat;
+.clothe-img:nth-child(2) img {
+    object-fit: contain;
+    width: 100%;
 }
 
-.clothe-img:nth-child(4) {
-    background: url("../../assets/person.png"), center, no-repeat;
+.clothe-img:nth-child(3) img {
+    object-fit: contain;
+    width: 100%;
+}
+
+.clothe-img:nth-child(4) img {
+    object-fit: contain;
+    width: 100%;
 }
 
 .clothe-review {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: clamp(320px, 100%, 600px);
-    
+    width: clamp(120px, 100%, 600px);
+
     font-family: Satoshi;
     margin: 0 16px 0 40px;
 }
@@ -604,6 +610,7 @@ header ul li a:hover {
 .tshirt-card-wrapper {
     display: flex;
     width: 100%;
+    margin-bottom: 78px;
     justify-content: space-around;
 }
 
@@ -617,7 +624,7 @@ header ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 55px 5px 78px 5px;
+    margin: 55px 5px 8px 5px;
 }
 
 .tshirt-card img {
@@ -631,6 +638,7 @@ header ul li a:hover {
 .tshirt-card h4 {
     font-weight: 700;
     font-size: 20px;
+    margin-top: 10px;
 }
 
 .tshirt-card-price {
@@ -657,28 +665,37 @@ header ul li a:hover {
 /* ------ */
 
 
-/* latest offer container */
+/* footer container */
 
-.offer {
+footer {
     display: flex;
     justify-content: center;
+    position: relative;
+    font-family: Satoshi;
+    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .offer-wrapper {
-    display: flex;
     width: var(--container-wrapper);
-    padding: 36px 64px;
-    margin: 0 16px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    padding: 36px 0;
     background-color: #000000;
     border-radius: 20px;
-    justify-content: space-between;
     color: #fff;
     font-family: bold-Integral cf;
+    z-index: 2;
+    top: -90px;
+    margin: auto;
+    justify-content: space-around;
 }
 
 .offer-wrapper h1 {
     font-size: 30px;
-    width: clamp(290px, 100%, 511px);
+    width: clamp(270px, 100%, 511px);
 }
 
 .offer-btns {
@@ -694,6 +711,7 @@ header ul li a:hover {
     background-color: #FFF;
     padding: 12px 0 12px 16px;
     border-radius: 62px;
+    width: clamp(311px, 100%, 349px);
 }
 
 .offer-btns div:nth-child(1) input::placeholder {
@@ -707,16 +725,143 @@ header ul li a:hover {
     border-radius: 62px;
     color: #000000;
     font-size: 1rem;
+    width: clamp(311px, 100%, 349px);
+    margin: auto;
 }
+
+.footer-container {
+    background-color: #F0F0F0;
+
+    width: 100%;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    padding: 140px 16px 75px 16px;
+}
+
+.footer-container-wrapper {
+    width: var(--container-wrapper);
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #0000001A;
+}
+
+.footer-content-item:nth-child(1) {
+    width: 248px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 25px;
+
+    color: #00000099;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.social-ico {
+    display: flex;
+    gap: 8px;
+}
+
+.footer-content-item:nth-child(1) span {
+    border: 1px solid #00000033;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 26px;
+
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.footer-content-item:nth-child(1) span:hover {
+    background-color: #314f4a33;
+}
+
+.footer-content-item:nth-child(1) span:nth-child(2) {
+    background-color: #000000;
+}
+
+.footer-content-item h2 {
+    font-family: bold-Integral CF;
+    font-size: 33px;
+    color: #000000;
+}
+
+.footer-content-item h3 {
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+.footer-content-item:not(.footer-content-item:nth-child(1)) ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-content-item:not(.footer-content-item:nth-child(1)) ul a {
+    color: #00000099;
+    font-size: 1rem;
+}
+
+.footer-pay {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    color: #00000099;
+    font-size: 14px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.pay-card {
+    display: flex;
+    gap: 12px;
+}
+
+.pay-card span {
+    width: 46px;
+    height: 30px;
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.22px solid #D6DCE5;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.pay-card span:hover {
+    background-color: rgba(128, 128, 128, 0.479);
+}
+
 
 /* --------- */
 
 
 
 /* ---- for phone ------ */
-@media only screen and (max-width: 868px) {
+@media only screen and (max-width: 1080px) {
     .nav-list {
         display: none;
+    }
+
+    .offer-text {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-content-item:not(.footer-content-item:nth-child(1)) ul {
+        width: 100px;
     }
 
     .card {
@@ -740,14 +885,14 @@ header ul li a:hover {
         flex-wrap: wrap;
         gap: 32px;
         justify-content: center;
-        margin: 0 16px;
+        width: 700px;
     }
 
     .clothe-review {
         margin: 20px 0;
     }
 
-    .review-navigation-btns button{
+    .review-navigation-btns button {
         font-size: 12px;
     }
 
@@ -775,13 +920,107 @@ header ul li a:hover {
         width: 15px;
         height: 15px;
     }
+
+    .footer-content {
+        gap: 40px;
+        margin-top: 60px;
+        justify-content: center;
+    }
 }
 
-@media only screen and (max-width: 500px) {
-    .clothe-size > div {
+@media only screen and (max-width: 800px) {
+    .offer-wrapper {
+        width: 640px;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .offer-wrapper {
+        width: 780px;
+    }
+
+    .offer-wrapper h1 {
+        text-align: center;
+    }
+
+    .offer-wrapper {
+        width: 320px;
+    }
+
+    .offer-btns button {
+        width: 300px;
+    }
+
+    .offer-btns div:nth-child(1) {
+        width: 300px;
+        margin: auto;
+    }
+
+    .product-info ul li {
+        font-size: 14px;
+    }
+
+    .offer-wrapper h1 {
+        font-size: 24px;
+    }
+
+    .banner__msg {
+        font-size: 12px;
+    }
+
+    .company-name {
+        font-size: 25px;
+    }
+
+    .clothe-size>div {
         justify-content: space-evenly;
     }
+
     .clothe-size-title {
-        font-size: 10px;
+        font-size: 8px;
+    }
+
+    .clothe-card {
+        display: grid;
+        grid-template-rows: 200px 123px;
+        grid-template-columns: repeat(3, minmax(100px, 133px));
+        gap: 14px;
+        justify-content: center;
+    }
+
+    .card {
+        justify-content: center;
+        display: flex;
+        margin: 0 16px;
+    }
+
+    .clothe-img {
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .clothe-img:nth-child(2) {
+        grid-column: span 3;
+        order: 1;
+    }
+
+    .clothe-img:nth-child(1) {
+        order: 2;
+    }
+
+
+    .clothe-img:nth-child(3) {
+        order: 3;
+    }
+
+    .clothe-img:nth-child(4) {
+        order: 4;
+    }
+
+    .footer-content {
+        margin-top: 90px;
+    }
+    .footer-pay {
+        justify-content: center;
     }
 }
