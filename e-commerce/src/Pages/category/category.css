@@ -15,6 +15,7 @@
 }
 
 
+
 * {
     margin: 0;
     padding: 0;
@@ -43,7 +44,8 @@ input {
 
 a,
 button,
-input {
+input,
+img {
     cursor: pointer;
 }
 
@@ -219,15 +221,236 @@ header ul li a:hover {
 
     gap: 36px;
     margin: 16px;
+    position: relative;
 }
 
 aside {
     display: flex;
     flex-direction: column;
+    gap: 24px;
+
     border: 1px solid #0000001A;
     border-radius: 20px;
 
     grid-row: span 3;
+    padding: 20px 24px;
+}
+
+.fillter-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-content:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #0000000F;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.aside-content img {
+    width: 24px;
+    height: 24px;
+}
+
+.aside-content:nth-child(2) {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-content:nth-child(2) ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.aside-content:nth-child(2) ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #00000099;
+    font-size: 1rem;
+}
+
+.aside-content:nth-child(2) ul li img {
+    width: 16px;
+    height: 16px;
+}
+
+.aside-content:nth-child(3) {
+    padding: 25px 0;
+    border-bottom: 1px solid #0000000F;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.aside-content:nth-child(3) span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.aside-content:nth-child(3) span img {
+    width: 16px;
+    height: 16px;
+}
+
+
+.aside-content:nth-child(4) {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    padding: 25px 0;
+    border-bottom: 1px solid #0000001A;
+}
+
+.aside-content:nth-child(4) h5 {
+    color: #00000099;
+    font-weight: 400;
+    align-self: flex-start;
+}
+
+.clothe-color {
+    display: flex;
+    gap: 16px;
+    align-self: flex-start;
+}
+
+.clothe-color span {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background-color: #314F4A;
+    cursor: pointer;
+}
+
+.clothe-color span:nth-child(1) {
+    background-color: blue;
+}
+
+.clothe-color span:nth-child(2) {
+    background-color: #31344F;
+}
+
+.clothe-color span:nth-child(3) {
+    background-color: red;
+}
+
+.clothe-color span:nth-child(5) {
+    background-color: green;
+}
+
+.clothe-size {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 25px 0;
+    border-bottom: 1px solid #0000001A;
+}
+
+.clothe-size>span:nth-child(1) {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 30px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.clothe-size span img {
+    width: 16px;
+    height: 16px;
+}
+
+.clothe-size>div {
+    display: flex;
+    gap: 12px;
+}
+
+.clothe-size-title {
+    padding: 12px 24px;
+    border-radius: 62px;
+    background-color: #F0F0F0;
+    cursor: pointer;
+    transition: .2s ease;
+    color: #00000099;
+}
+
+.clothe-size-title:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.aside-content:nth-child(6) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px 0;
+    border-bottom: 1px solid #0000001A;
+}
+
+.aside-content:nth-child(6) span {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.aside-content:nth-child(6) span img {
+    width: 16px;
+    height: 16px;
+}
+
+.aside-content:nth-child(6) ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.aside-content:nth-child(6) ul li {
+    display: flex;
+    justify-content: space-between;
+    color: #00000099;
+}
+
+.aside-content:nth-child(6) ul li img {
+    width: 16px;
+    height: 16px;
+}
+
+.aside-content:nth-child(7) {
+    padding: 25px 0;
+    border-bottom: 1px solid #0000000F;
+}
+
+.aside-content-button {
+    background-color: #000000;
+    color: #FFF;
+    width: clamp(180px, 100%, 300px);
+    height: 47px;
+    border-radius: 62px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: .3s ease;
+}
+
+.aside-content-button:active {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
 }
 
 .casual {
@@ -238,6 +461,7 @@ aside {
     grid-template-columns: repeat(3, minmax(200px, 375px));
     grid-template-rows: 43px repeat(3, 1fr);
     gap: 21px;
+    margin-bottom: 32px;
 }
 
 .casual-nav {
@@ -284,6 +508,8 @@ aside {
     display: flex;
     flex-direction: column;
     margin: auto;
+
+    cursor: pointer;
 }
 
 .image-clothe {
@@ -297,6 +523,11 @@ aside {
     font-weight: 700;
     font-size: 20px;
     margin-top: 10px;
+    transition: .3s ease;
+}
+
+.tshirt-card:active h4 {
+    color: rgba(128, 128, 128, 0.452);
 }
 
 .tshirt-card-price {
@@ -318,6 +549,48 @@ aside {
     border-radius: 62px;
     font-size: 12px;
 }
+
+.page-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -90px;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 20px;
+    border-top: 1px solid #0000001A;
+    width: clamp(172px, 100%, 650px);
+}
+
+.page-container span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #0000000F;
+    padding: 8px 14px;
+    cursor: pointer;
+}
+
+.page-container ul {
+    display: flex;
+    gap: 4px;
+}
+
+.page-container ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #0000000F;
+    cursor: pointer;
+}
+
+.page-container ul li a {
+    color: #000000;
+}
+
 
 /* ------- */
 
@@ -619,6 +892,34 @@ footer {
     .review-content-card-star img {
         width: 18px;
         height: 18px;
+    }
+
+    .page-container ul {
+        gap: 0px;
+    }
+
+    .page-container ul li {
+        width: 36px;
+        height: 36px;
+    }
+
+    .page-container span {
+        font-size: 12px;
+        padding: 8px 5px;
+    }
+
+    .page-container span img {
+        width: 9px;
+        height: 9px;
+    }
+
+    .page-container ul li:nth-child(3),
+    .page-container ul li:nth-child(5) {
+        display: none;
+    }
+
+    .page-container ul li a {
+        font-size: 12px;
     }
 
     .footer-content {
