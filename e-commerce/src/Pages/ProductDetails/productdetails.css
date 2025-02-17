@@ -855,6 +855,13 @@ footer {
         display: none;
     }
 
+    .offer-wrapper {
+        flex-wrap: wrap;
+        gap: 32px;
+        justify-content: center;
+        width: 700px;
+    }
+
     .offer-text {
         display: flex;
         justify-content: center;
@@ -881,12 +888,6 @@ footer {
         flex-wrap: wrap;
     }
 
-    .offer-wrapper {
-        flex-wrap: wrap;
-        gap: 32px;
-        justify-content: center;
-        width: 700px;
-    }
 
     .clothe-review {
         margin: 20px 0;
@@ -935,6 +936,10 @@ footer {
 }
 
 @media only screen and (max-width: 660px) {
+    .banner__msg {
+        font-size: 12px;
+    }
+
     .offer-wrapper {
         width: 780px;
     }
@@ -962,10 +967,6 @@ footer {
 
     .offer-wrapper h1 {
         font-size: 24px;
-    }
-
-    .banner__msg {
-        font-size: 12px;
     }
 
     .company-name {
@@ -1020,6 +1021,7 @@ footer {
     .footer-content {
         margin-top: 90px;
     }
+
     .footer-pay {
         justify-content: center;
     }

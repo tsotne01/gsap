@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./productdetails.css">
+    <link rel="stylesheet" href="./category.css">
     <link rel="icon" type="image/svg+xml" href="../../../public/vite.svg" />
     <title>Vite App</title>
 </head>
@@ -33,7 +33,7 @@
         </nav>
         <div class="search-box">
             <button class="search-btn">
-                <img src="../../assets/search-ico.svg" alt="">
+                <img src="../../assets/search-ico.svg" alt="search-ico">
             </button>
             <input type="text" class="search-input" placeholder="Search for products...">
         </div>
@@ -56,6 +56,7 @@
         </div>
     </header>
 
+
     <main>
         <!-- Tab contianer -->
         <section class="tab-container">
@@ -65,249 +66,24 @@
             </div>
         </section>
 
-        <!-- clothe container -->
-        <section class="clothe-review-container">
-            <div class="clothe-review-container-wrapper">
-                <div class="card">
-                    <div class="clothe-card">
-                        <div class="clothe-img"><img src="../../assets/t-shirtWithBrownTitle.png" alt=""></div>
-                        <div class="clothe-img"><img src="../../assets/t-shirt.png" alt=""></div>
-                        <div class="clothe-img"><img src="../../assets/person.png" alt=""></div>
-                        <div class="clothe-img"><img src="../../assets/t-shirtWithBrownTitle.png" alt=""></div>
-                    </div>
-                    <div class="clothe-review">
-                        <span class="clothe-review-title">One Life Graphic T-shirt</span>
-                        <div class="clothe-review-star">
-                            <img src="../../assets/review-star.svg" alt="star">
-                            <img src="../../assets/review-star.svg" alt="star">
-                            <img src="../../assets/review-star.svg" alt="star">
-                            <img src="../../assets/review-star.svg" alt="star">
-                            <img src="../../assets/review-star.svg" alt="star">
-                            <p>4.5/5</p>
-                        </div>
-                        <div class="clothe-price">
-                            <span>$260</span>
-                            <span><s>$300</s></span>
-                            <span class="sale">-40%</span>
-                        </div>
-                        <p class="clothe-description">This graphic t-shirt which is perfect for any occasion. Crafted
-                            from a soft and breathable fabric, it offers superior
-                            comfort and style.</p>
-                        <div class="clothe-color-container">
-                            <h5>Select Color</h5>
-                            <div class="clothe-color">
-                                <span class="circle"></span>
-                                <span class="circle"></span>
-                                <span class="circle"></span>
-                            </div>
-                        </div>
-                        <div class="clothe-size">
-                            <h5>Choose Size</h5>
-                            <div>
-                                <span class="clothe-size-title">Small</span>
-                                <span class="clothe-size-title">Medium</span>
-                                <span class="clothe-size-title">Large</span>
-                                <span class="clothe-size-title">X-Large</span>
-                            </div>
-                        </div>
-                        <div class="clothe-addCart-btn">
-                            <div>
-                                <button><img src="../../assets/minus.svg" alt="minus"></button>
-                                <span>1</span>
-                                <button><img src="../../assets/plus.svg" alt="plus"></button>
-                            </div>
-                            <div>Add to Cart</div>
-                        </div>
-                    </div>
-                </div>
+        <!-- casual container -->
 
-                <div class="product-info">
-                    <ul>
-                        <li>Product Details</li>
-                        <li>Rating & Reviews</li>
-                        <li>FAQs</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        <section class="casual-container">
+            <div class="casual-container-wrapper">
+                <aside class="filter">
 
+                </aside>
 
-        <!-- review  container-->
-        <section class="review">
-            <div class="review-wrapper">
-                <div class="review-navigation">
-                    <div class="review-navigation-content">
-                        <h6>All Reviews</h6>
-                        <span>(451)</span>
+                <div class="casual">
+                    <div class="casual-nav">
+                        <h1>Casual</h1>
+                        <div class="casual-nav-content">
+                            <span class="amount">Showing 1-10 of 100 Products</span>
+                            <span class="sort">Sort by:</span>
+                            <span class="popular">Most Popular img <img src="../../assets/dropDownMenu.svg" alt="down-arrow"></span>
+                            <img src="../../assets/filter.svg" alt="fillter" class="settings">
+                        </div>
                     </div>
-                    <div class="review-navigation-btns">
-                        <button><img src="../../assets/filter.svg" alt=""></button>
-                        <button>Latest <img src="../../assets/dropDownMenu.svg" alt="drop-down-menu"></button>
-                        <button> Write a review</button>
-                    </div>
-                </div>
-                <div class="review-content">
-                    <div class="review-content-card">
-                        <div class="review-content-card-star">
-                            <div>
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                            </div>
-                            <div>
-                                <span></span><span></span><span></span>
-                            </div>
-                        </div>
-                        <div class="review-content-card-header">
-                            <h3>Samantha D.</h3>
-                            <img src="../../assets/green-done.svg" alt="done">
-                        </div>
-                        <p>
-                            "I absolutely love this t-shirt! The design is unique and the fabric feels so
-                            comfortable.
-                            As a fellow designer, I
-                            appreciate the attention to detail. It's become my favorite go-to shirt."
-                        </p>
-                        <h6>Posted on August 14, 2023</h6>
-                    </div>
-                    <div class="review-content-card">
-                        <div class="review-content-card-star">
-                            <div>
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                            </div>
-                            <div>
-                                <span></span><span></span><span></span>
-                            </div>
-                        </div>
-                        <div class="review-content-card-header">
-                            <h3>Samantha D.</h3>
-                            <img src="../../assets/green-done.svg" alt="done">
-                        </div>
-                        <p>
-                            "I absolutely love this t-shirt! The design is unique and the fabric feels so
-                            comfortable.
-                            As a fellow designer, I
-                            appreciate the attention to detail. It's become my favorite go-to shirt."
-                        </p>
-                        <h6>Posted on August 14, 2023</h6>
-                    </div>
-                    <div class="review-content-card">
-                        <div class="review-content-card-star">
-                            <div>
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                            </div>
-                            <div>
-                                <span></span><span></span><span></span>
-                            </div>
-                        </div>
-                        <div class="review-content-card-header">
-                            <h3>Samantha D.</h3>
-                            <img src="../../assets/green-done.svg" alt="done">
-                        </div>
-                        <p>
-                            "I absolutely love this t-shirt! The design is unique and the fabric feels so
-                            comfortable.
-                            As a fellow designer, I
-                            appreciate the attention to detail. It's become my favorite go-to shirt."
-                        </p>
-                        <h6>Posted on August 14, 2023</h6>
-                    </div>
-                    <div class="review-content-card">
-                        <div class="review-content-card-star">
-                            <div>
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                            </div>
-                            <div>
-                                <span></span><span></span><span></span>
-                            </div>
-                        </div>
-                        <div class="review-content-card-header">
-                            <h3>Samantha D.</h3>
-                            <img src="../../assets/green-done.svg" alt="done">
-                        </div>
-                        <p>
-                            "I absolutely love this t-shirt! The design is unique and the fabric feels so
-                            comfortable.
-                            As a fellow designer, I
-                            appreciate the attention to detail. It's become my favorite go-to shirt."
-                        </p>
-                        <h6>Posted on August 14, 2023</h6>
-                    </div>
-                    <div class="review-content-card">
-                        <div class="review-content-card-star">
-                            <div>
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                            </div>
-                            <div>
-                                <span></span><span></span><span></span>
-                            </div>
-                        </div>
-                        <div class="review-content-card-header">
-                            <h3>Samantha D.</h3>
-                            <img src="../../assets/green-done.svg" alt="done">
-                        </div>
-                        <p>
-                            "I absolutely love this t-shirt! The design is unique and the fabric feels so
-                            comfortable.
-                            As a fellow designer, I
-                            appreciate the attention to detail. It's become my favorite go-to shirt."
-                        </p>
-                        <h6>Posted on August 14, 2023</h6>
-                    </div>
-                    <div class="review-content-card">
-                        <div class="review-content-card-star">
-                            <div>
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
-                            </div>
-                            <div>
-                                <span></span><span></span><span></span>
-                            </div>
-                        </div>
-                        <div class="review-content-card-header">
-                            <h3>Samantha D.</h3>
-                            <img src="../../assets/green-done.svg" alt="done">
-                        </div>
-                        <p>
-                            "I absolutely love this t-shirt! The design is unique and the fabric feels so
-                            comfortable.
-                            As a fellow designer, I
-                            appreciate the attention to detail. It's become my favorite go-to shirt."
-                        </p>
-                        <h6>Posted on August 14, 2023</h6>
-                    </div>
-                </div>
-                <button class="load-more">Load More Reviews</button>
-            </div>
-        </section>
-
-        <!-- you might also like  -->
-
-        <section class="tshirt-container">
-            <div class="tshirt-container-wrapper">
-                <h2>YOU MIGHT ALSO LIKE</h2>
-                <div class="tshirt-card-wrapper">
                     <div class="tshirt-card">
                         <img src="../../assets/blue-tshirt.png" alt="tshirt" class="image-clothe">
                         <h4>Polo with Contrast Trims</h4>
@@ -336,7 +112,6 @@
                                 <img src="../../assets/review-star.svg" alt="star">
                                 <img src="../../assets/review-star.svg" alt="star">
                                 <img src="../../assets/review-star.svg" alt="star">
-                                <img src="../../assets/review-star.svg" alt="star">
                             </div>
                             <span>4.0/5</span>
                         </div>
@@ -347,7 +122,7 @@
                         </div>
                     </div>
                     <div class="tshirt-card">
-                        <img src="../../assets/pink-tshit.png" alt="tshirt" class="image-clothe">
+                        <img src="../../assets/jeans.png" alt="tshirt" class="image-clothe">
                         <h4>Polo with Contrast Trims</h4>
                         <div class="review-content-card-star">
                             <div>
@@ -374,6 +149,91 @@
                                 <img src="../../assets/review-star.svg" alt="star">
                                 <img src="../../assets/review-star.svg" alt="star">
                                 <img src="../../assets/review-star.svg" alt="star">
+                            </div>
+                            <span>4.0/5</span>
+                        </div>
+                        <div class="tshirt-card-price">
+                            <span>$212</span>
+                        </div>
+                    </div>
+                    <div class="tshirt-card">
+                        <img src="../../assets/perangi.png" alt="tshirt" class="image-clothe">
+                        <h4>Polo with Contrast Trims</h4>
+                        <div class="review-content-card-star">
+                            <div>
+                                <img src="../../assets/review-star.svg" alt="star">
+                                <img src="../../assets/review-star.svg" alt="star">
+                                <img src="../../assets/review-star.svg" alt="star">
+                                <img src="../../assets/review-star.svg" alt="star">
+                                <img src="../../assets/review-star.svg" alt="star">
+                            </div>
+                            <span>4.0/5</span>
+                        </div>
+                        <div class="tshirt-card-price">
+                            <span>$212</span>
+                        </div>
+                    </div>
+                    <div class="tshirt-card">
+                        <img src="../../assets/pink-tshit.png" alt="tshirt" class="image-clothe">
+                        <h4>Polo with Contrast Trims</h4>
+                        <div class="review-content-card-star">
+                            <div>
+                                <img src="../../assets/review-star.svg" alt="star">
+                                <img src="../../assets/review-star.svg" alt="star">
+                                <img src="../../assets/review-star.svg" alt="star">
+                                <img src="../../assets/review-star.svg" alt="star">
+                            </div>
+                            <span>4.0/5</span>
+                        </div>
+                        <div class="tshirt-card-price">
+                            <span>$212</span>
+                            <span><s>$242</s></span>
+                            <span>-20%</span>
+                        </div>
+                    </div>
+                    <div class="tshirt-card">
+                        <img src="../../assets/blue-tshirt.png" alt="tshirt" class="image-clothe">
+                        <h4>Polo with Contrast Trims</h4>
+                        <div class="review-content-card-star">
+                            <div>
+                                <img src="../../assets/review-star.svg" alt="star">
+                                <img src="../../assets/review-star.svg" alt="star">
+                                <img src="../../assets/review-star.svg" alt="star">
+                                <img src="../../assets/review-star.svg" alt="star">
+                                <img src="../../assets/review-star.svg" alt="star">
+                            </div>
+                            <span>4.0/5</span>
+                        </div>
+                        <div class="tshirt-card-price">
+                            <span>$212</span>
+                            <span><s>$242</s></span>
+                            <span>-20%</span>
+                        </div>
+                    </div>
+                    <div class="tshirt-card">
+                        <img src="../../assets/perangi.png" alt="tshirt" class="image-clothe">
+                        <h4>Polo with Contrast Trims</h4>
+                        <div class="review-content-card-star">
+                            <div>
+                                <img src="../../assets/review-star.svg" alt="star">
+                                <img src="../../assets/review-star.svg" alt="star">
+                                <img src="../../assets/review-star.svg" alt="star">
+                            </div>
+                            <span>4.0/5</span>
+                        </div>
+                        <div class="tshirt-card-price">
+                            <span>$212</span>
+                        </div>
+                    </div>
+                    <div class="tshirt-card">
+                        <img src="../../assets/shirt-orange.png" alt="tshirt" class="image-clothe">
+                        <h4>Polo with Contrast Trims</h4>
+                        <div class="review-content-card-star">
+                            <div>
+                                <img src="../../assets/review-star.svg" alt="star">
+                                <img src="../../assets/review-star.svg" alt="star">
+                                <img src="../../assets/review-star.svg" alt="star">
+                                <img src="../../assets/review-star.svg" alt="star">
                                 <img src="../../assets/review-star.svg" alt="star">
                             </div>
                             <span>4.0/5</span>
@@ -388,7 +248,8 @@
             </div>
         </section>
 
-        <!-- lastest offer -->
+
+        <!-- footer container  -->
 
         <footer>
             <div class="offer-wrapper">
@@ -408,11 +269,13 @@
                     <div class="footer-content">
                         <div class="footer-content-item">
                             <h2>shop.co</h2>
-                            <p>We have clothes that suits your style and which you’re proud to wear. From women to men.</p>
+                            <p>We have clothes that suits your style and which you’re proud to wear. From women to men.
+                            </p>
                             <div class="social-ico">
                                 <span><img src="../../assets/twitter.svg" alt="twitter" class="tiwtter-ico"></span>
                                 <span><img src="../../assets/facebook.svg" alt="facebook" class="facebook-ico"></span>
-                                <span><img src="../../assets/instagram.svg" alt="instagram" class="instagram-ico"></span>
+                                <span><img src="../../assets/instagram.svg" alt="instagram"
+                                        class="instagram-ico"></span>
                                 <span><img src="../../assets/github.svg" alt="github" class="github-ico"></span>
                             </div>
                         </div>
@@ -428,10 +291,10 @@
                         <div class="footer-content-item">
                             <ul>
                                 <h3>HELP</h3>
-                                <li><a href="#">Customer Support</a></li>
-                                <li><a href="#">Delivery Details</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Support</a></li>
+                                <li><a href="#">Details</a></li>
+                                <li><a href="#">Conditions</a></li>
+                                <li><a href="#">Privacy</a></li>
                             </ul>
                         </div>
                         <div class="footer-content-item">
@@ -468,7 +331,6 @@
                 </div>
             </div>
         </footer>
-
     </main>
 </body>
 
