@@ -640,6 +640,7 @@ footer {
 
   display: flex;
   justify-content: center;
+  overflow: hidden;
   padding: 140px 16px 75px 16px;
 }
 
@@ -815,10 +816,6 @@ footer {
 }
 
 @media only screen and (max-width: 660px) {
-  .footer-content {
-    margin-top: 90px;
-  }
-
   .footer-pay {
     justify-content: center;
   }

@@ -775,6 +775,7 @@ footer {
     display: flex;
     justify-content: center;
     padding: 140px 16px 75px 16px;
+    overflow: hidden;
 }
 
 .footer-container-wrapper {
