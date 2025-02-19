@@ -26,6 +26,7 @@ gsap.from(".banner", {
   opacity: 0,
   duration: 1,
 });
+
 gsap.from(".close img", {
   x: "100vw",
   duration: 0.3,
@@ -68,6 +69,7 @@ gsap.to(".star-1", {
   duration: () => (Math.random() * 2 + 2),
   repeat: -1,
 })
+
 gsap.to(".star-2", {
   rotation: 360,
   scale: 1.2,
@@ -75,72 +77,100 @@ gsap.to(".star-2", {
   repeat: -1,
 })
 
+let topCard = gsap.utils.toArray(".card-top");
+let bottomCard = gsap.utils.toArray(".card-bottom");
 
-let txt = "One Life Graphic T-shirt";
-
-
-gsap.to(".clothe-review-title", {
-  duration: 4,
-  text: {
-    value: txt,
-    delimiter: "",
-  },
-  color: "rgba(128, 128, 128, 0.434)"
-})
-
-
-let nav = document.querySelector(".nav-list");
-let btns = document.querySelector(".cart-container");
-
-gsap.from(btns.children, {
-  duration: 2,
-  opacity: 0,
-  stagger: {
-    amount: 2,
-    from: "center"
-  }
-})
-
-gsap.from(nav.children, {
+gsap.from(topCard, {
   duration: 1,
   opacity: 0,
-  stagger: {
-    amount: 1,
-  }
-})
-
-const star = gsap.utils.toArray(".star-animation");
-
-gsap.from(star, {
-  duration: 0.3,
-  opacity: 0,
-  stagger: 0.1,
-  scrollTrigger: {
-    trigger: star[0],
-  }
-})
-
-const tshirtCard = gsap.utils.toArray(".tshirt-card");
-
-console.log(tshirtCard);
-
-gsap.from(tshirtCard, {
-  opacity: 0,
+  y: 200,
   stagger: 0.3,
-  duration: 1,
-  y: 100,
-
   scrollTrigger: {
-    trigger: tshirtCard,
+    trigger: topCard,
+    toggleActions: "restart none none none"
   }
 })
 
+gsap.from(bottomCard, {
+  duration: 1,
+  opacity: 0,
+  y: 200,
+  stagger: 0.3,
+  scrollTrigger: {
+    trigger: bottomCard,
+    toggleActions: "restart none none none"
+  }
+})
+
+let title = gsap.utils.toArray(".hello");
+
+
+gsap.from(title, {
+  duration: 1,
+  opacity: 0,
+  x: -400,
+  stagger: 0.3,
+  letterSpacing: "20px",
+  scrollTrigger: {
+    trigger: topCard,
+    toggleActions: "restart none none none"
+  }
+})
+
+
+gsap.from(".casual-style", {
+  duration: 1,
+  opacity: 0,
+  x: -1000,
+  y: -200,
+  scrollTrigger: {
+    trigger: ".section-4-browse-style",
+    toggleActions: "restart none none none"
+  }
+})
+
+gsap.from(".formal-style", {
+  duration: 1,
+  opacity: 0,
+  x: 1000,
+  y: -200,
+  scrollTrigger: {
+    trigger: ".section-4-wrapper",
+    toggleActions: "restart none none none"
+
+  }
+})
+
+gsap.from(".party-style", {
+  duration: 1,
+  opacity: 0,
+  delay: 1,
+  x: -1000,
+  y: 200,
+  scrollTrigger: {
+    trigger: ".section-4-browse-style",
+    toggleActions: "restart none none none"
+  }
+})
+
+gsap.from(".gym-style", {
+  duration: 1,
+  opacity: 0,
+  delay: 1,
+  x: 1000,
+  y: 200,
+  scrollTrigger: {
+    trigger: ".section-4-browse-style",
+    toggleActions: "restart none none none"
+  }
+})
 
 const footerItem = gsap.utils.toArray(".footer-content-item li a");
 
 let footerTl = gsap.timeline({
   scrollTrigger: {
     trigger: footerItem,
+    toggleActions: "restart none none none"
   }
 });
 
@@ -158,7 +188,7 @@ footerTl.fromTo(".footer-content-item li", {
   x: 0,
 })
 
-const footerCard = gsap.utils.toArray(".saba");
+const footerCard = gsap.utils.toArray(".pay-method");
 
 footerTl.fromTo(footerCard, {
   duration: 1,
@@ -169,3 +199,104 @@ footerTl.fromTo(footerCard, {
   stagger: 0.3,
   x: 0
 }, "-=3")
+
+
+
+
+// productDetails page
+gsap.from(".company-name", {
+  duration: 1,
+  opacity: 0,
+  y: -10
+})
+
+let txt = "One Life Graphic T-shirt";
+
+
+gsap.to(".clothe-review-title", {
+  duration: 4,
+  text: {
+    value: txt,
+    delimiter: "",
+  },
+  color: "#000"
+})
+
+
+let nav = document.querySelector(".nav-list");
+let btns = document.querySelector(".cart-container");
+
+let navTl = gsap.timeline()
+
+navTl.from(nav.children, {
+  duration: 1,
+  opacity: 0,
+  y: -100,
+  stagger: 0.3
+})
+
+navTl.from(btns.children, {
+  duration: 2,
+  opacity: 0,
+  y: 100,
+  stagger: {
+    amount: 0.3,
+  }
+})
+
+const star = gsap.utils.toArray(".star-animation");
+
+gsap.from(star, {
+  duration: 0.3,
+  opacity: 0,
+  stagger: 0.1,
+  scrollTrigger: {
+    trigger: star,
+    toggleActions: "restart none none none",
+  }
+})
+
+const tshirtCard = gsap.utils.toArray(".tshirt-card");
+
+gsap.from(tshirtCard, {
+  opacity: 0,
+  stagger: 0.3,
+  duration: 1,
+  y: 100,
+
+  scrollTrigger: {
+    trigger: tshirtCard,
+    toggleActions: "restart none none none",
+    star: "top center"
+  }
+})
+
+gsap.from(".clothe-img:nth-child(1)", {
+  duration: 1,
+  opacity: 0,
+  stagger: 0.3,
+  y: -100,
+  x: -100
+})
+
+gsap.from(".clothe-img:nth-child(2)", {
+  duration: 1,
+  opacity: 0,
+  stagger: 0.3,
+  x: 100
+})
+
+gsap.from(".clothe-img:nth-child(3)", {
+  duration: 1,
+  opacity: 0,
+  stagger: 0.3,
+  x: -100
+})
+
+gsap.from(".clothe-img:nth-child(4)", {
+  duration: 1,
+  opacity: 0,
+  stagger: 0.3,
+  y: 100,
+  x: -100
+})
