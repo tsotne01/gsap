@@ -449,17 +449,18 @@ header ul li a:hover {
     font-weight: 500;
     padding-bottom: 24px;
     text-align: center;
-    transition: 1s ease;
     color: #00000099;
     cursor: pointer;
+    transition: all 1s ease;
     width: 300px;
+    border-bottom: solid 1px transparent;
+    transition: border-color 0.3s ease-in-out;
 }
 
 .product-info ul li:hover {
-    border-bottom: 1px solid #000000;
     color: #000000;
+    border-color: black;
 }
-
 
 /* ---------- */
 
@@ -556,6 +557,10 @@ header ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.green {
+    color: green;
 }
 
 .review-content-card-star div:nth-child(2) {
